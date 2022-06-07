@@ -3,7 +3,7 @@
 Size, Position and Pin layers super fast.
 
 
-## [👉 Download the latest version of the plugin here](https://github.com/fbmore/Magic-Wand-Sketch-Plugin/raw/main/Magic-Wand.sketchplugin.zip)
+## [👉 Download the latest version of the plugin here](https://github.com/fbmore/Magic-Wand-Sketch-Plugin/raw/main/Magic%20Wand.sketchplugin.zip)
 
 ---
 
