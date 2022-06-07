@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <link rel="stylesheet" href="./style.css"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+	/* body,
+	html {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+div {
+padding: 10px;
+} */
+
+:root {
+	color-scheme: light dark;
+	/* View Size */
+	--width: 190px;
+	--height: 320px;
+	/* Design Tokens */
+	/* --color-accent: -apple-system-control-accent; */
+	--color-accent: #EB5E00;
+	--color-white: #ffffff;
+	--color-grey-lightest: #f9f9f9;
+	--color-grey-lighter: #ededed;
+	--color-grey-light: #d4d4d4;
+	--color-grey: #bfbfbf;
+	--color-grey-dark: #707070;
+	/* --color-grey-darker: #4c4c4c; */
+	--color-grey-darker: #2E2E2E;
+	--color-black: #000000;
+	--color-primary: #FA6400;
+	--color-primary-dark: #ffffff;
+	--color-primary-light: #ffffff;
+	--color-primary-lighter: #ffffff;
+	--color-primary-lightest: #ffffff;
+	--color-status-danger: #ff0000;
+	--color-status-warning: #ff0000;
+	--color-status-success: #ff0000;
+	--color-trasparency-black-10: rgba(0, 0, 0, 0.1);
+	--color-trasparency-black-24: rgba(0, 0, 0, 0.24);
+	--color-trasparency-white-10: rgba(255, 255, 255, 0.1);
+	--color-trasparency-white-24: rgba(255, 255, 255, 0.24);
+	--color-gradient-primary: linear-gradient(180deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.20) 100%);
+	--opacity-30: 0.3;
+	--opacity-50: 0.5;
+	--opacity-75: 0.75;
+	--opacity-85: 0.85;
+	/* Space */
+	--space-xxx-small: 2px;
+	--space-xx-small: 4px;
+	--space-x-small: 8px;
+	--space-small: 12px;
+	--space-medium: 16px;
+	--space-large: 20px;
+	--space-x-large: 24px;
+	--space-xx-large: 36px;
+	--space-xxx-large: 48px;
+	--space-xxxx-large: 72px;
+	/* Sizes */
+	--size-xx-small: 10px;
+	--size-x-small: 16px;
+	--size-small: 20px;
+	--size-medium: 24px;
+	--size-large: 30px;
+	--size-x-large: 36px;
+	--size-xx-large: 48px;
+	--size-xxx-large: 72px;
+	--size-layout-max-width: 100%;
+	--size-header: var(--size-xxx-large);
+	--size-footer: var(--size-xx-large);
+	--border-width-default: 0.5px;
+	--border-width-selected: 1px;
+	/* Texts */
+	--font-weight-regular: 400;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+	--font-size-small: 0.875rem;
+	--font-size-medium: 1rem;
+	--font-size-large: 1.182rem;
+	--font-size-xlarge: 1.636rem;
+	--text-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--text-font-body-size: 1rem;
+	--text-font-body-color: var(--color-black);
+	--text-font-body-weight: 400;
+	--text-font-h1-size: 1.182rem;
+	--text-font-h1-weight: 600;
+	--text-font-label-size: 1rem;
+	--text-font-label-color: var(--color-grey-darker);
+	--text-font-label-weight: 400;
+	/* Border Radius */
+	--border-radius-sharp: 0;
+	--border-radius-xsmall: 4px;
+	--border-radius-small: 8px;
+	--border-radius-medium: 12px;
+	--border-radius-large: 20px;
+	--border-radius-xlarge: 24px;
+	--border-radius-circle: 50%;
+	/* Box Shadow */
+	--shadow-none: 0;
+	--shadow-small: 2px;
+	--shadow-medium: 4px;
+	--shadow-large: 7px;
+	--shadow-blur-none: 0;
+	--shadow-blur-xsmall: 1px;
+	--shadow-blur-small: 10px;
+	--shadow-blur-medium: 16px;
+	--shadow-blur-large: 25px;
+	--shadow-tooltip: ;
+}
+
+
+/* Force a light theme here */
+
+@media screen and (prefers-color-scheme: light) {
+	:root {
+		--view-background-color: var(--color-white);
+		--footer-background-color: var(--color-grey-lightest);
+		--buttongroup-background-color: var(--color-grey-lighter);
+		--buttongroup-box-shadow: var(--shadow-none) var(--shadow-none) var(--shadow-blur-xsmall) var(--color-primary-dark);
+		--buttongroup-border: none;
+		--buttongroup-color: var(--color-grey-darker);
+		--buttongroup-background-image: none;
+		--buttongroup-button-background-default: none;
+		/* --buttongroup-button-background-active: var(--color-white); */
+		--buttongroup-button-background-active: var(--color-accent);
+		--buttongroup-button-color-active: inherit;
+		--buttongroup-input-border: 0.5px solid transparent;
+		--header-color: var(--color-grey-darker);
+		--label-color: var(--color-grey-darker);
+		--input-color: var(--color-grey-darker);
+		/* --input-background-color: var(--color-white); */
+		--input-background-color: var(--color-grey-lighter);
+		--select-background-gradient: linear-gradient(to bottom, var(--color-white) 0%, var(--color-black) 100%);
+		--placeholder-color: var(--color-grey);
+		--input-color-disabled: var(--color-grey-light);
+		--input-background-color-disabled: var(--color-grey-lighter);
+		--select-border-color: var(--color-grey);
+	}
+
+	.svg-tint {
+		filter: invert(80%);
+	}
+
+	.svg-tint:hover {
+		/* filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%); */
+		filter: invert(50%);
+	}
+
+	.svg-tint:active {
+		/* filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%); */
+		/* filter: invert(100%); */
+		filter: invert(48%) sepia(79%) saturate(4500%) brightness(100%) contrast(119%);
+
+	}
+
+}
+
+
+/* Force a dark theme here */
+
+@media screen and (prefers-color-scheme: dark) {
+	:root {
+		--view-background-color: inherit;
+		--footer-background-color: var(--color-grey-darker);
+		--buttongroup-background-color: var(--color-grey-darker);
+		--buttongroup-box-shadow: none;
+		--buttongroup-border: 0;
+		--buttongroup-color: var(--color-grey-lightest);
+		--buttongroup-background-image: var(--color-gradient-primary);
+		--buttongroup-button-background-default: none;
+		--buttongroup-button-background-active: var(--color-grey-light);
+		--buttongroup-button-color-active: var(--color-grey-darker);
+		--buttongroup-input-border: 0.5px solid transparent;
+		--header-color: var(--color-grey-lightest);
+		--label-color: var(--color-grey-lightest);
+		--input-color: var(--color-grey-lightest);
+		--input-background-color: var(--color-grey-darker);
+		/* --input-background-color: #2E2E2E; */
+		--select-background-gradient: linear-gradient(to bottom, var(--color-black) 0%, var(--color-white) 100%);
+		--placeholder-color: var(--color-grey-dark);
+		--input-color-disabled: var(--color-grey-dark);
+		--input-background-color-disabled: var(--color-darker);
+		--select-border-color: var(--color-grey-darker);
+	}
+
+
+	.svg-tint:hover {
+		/* filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%); */
+		filter: invert(50%);
+	}
+
+	.svg-tint:active {
+		/* filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%); */
+		/* filter: invert(100%); */
+		filter: invert(48%) sepia(50%) saturate(4000%) brightness(118%) contrast(119%);
+
+	}
+
+}
+
+
+
+/* force SVG icons to change color
+
+/*target the image with css*/
+/* svg{
+} */
+
+/* some default styles to make the view more native like */
+
+html {
+	box-sizing: border-box;
+	/* Prevent the page to be scrollable */
+	overflow: hidden;
+	/* Force the default cursor, even on text */
+	cursor: default;
+	font-size: 11px;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+	/* position: relative; */
+	/* Prevent the content from being selectionable */
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+body {
+	width: calc(var(--width) - 400);
+	height: var(--height);
+	display: flex;
+	flex-direction: column;
+	font-family: var(--text-font-family);
+	font-size: var(--text-font-body-size);
+	color: var(--text-font-body-color);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
+.view {
+	width: var(--size-layout-max-width);
+	height: auto;
+	background-color: var(--view-background-color);
+}
+
+header {
+	height: var(--size-header);
+	width: var(--size-layout-max-width);
+	padding: 0 var(--space-xxx-large);
+	display: flex;
+	align-items: center;
+	justify-content: left;
+}
+
+h1 {
+	color: var(--header-color);
+	font-size: var(--text-font-h1-size);
+	font-weight: var(--text-font-h1-weight);
+}
+
+footer {
+	width: var(--size-layout-max-width);
+	height: 48px;
+	padding-right: var(--space-large);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	background-color: var(--footer-background-color);
+	inset-inline-end: 0;
+}
+
+#container {
+	margin: var(--space-x-large) var(--space-x-large) 0;
+}
+
+#container>div {
+	padding-bottom: var(--space-x-large);
+}
+
+#container>div:first-child {
+	padding-top: var(--space-x-medium);
+}
+
+.table {
+	/* a table */
+	display: table;
+	height: 100%;
+	width: var(--size-layout-max-width);
+	border-collapse: collapse;
+}
+
+.table>div {
+	display: table-row;
+	border-bottom: var(--space-x-large) solid transparent;
+	/* min-height: calc(var(--size-small)+ var(--space-x-large)); */
+}
+
+.table>div>div {
+	display: table-cell;
+	text-align: left;
+	vertical-align: top;
+	/* height: calc(var(--size-small) + var(--space-x-large)); */
+}
+
+.table>div>.cell-label {
+	text-align: left;
+	vertical-align: middle;
+	width: 50px;
+	min-width: 50px;
+}
+
+/* .table>div>.cell-data {
+text-align: right;
+width: 86px;
+} */
+
+.table>div>.cell-space {
+	width: 32px;
+	max-width: 32px;
+	min-width: 32px;
+}
+
+input,
+textarea,
+select,
+button {
+	-webkit-user-select: auto;
+	user-select: auto;
+	font-family: var(--text-font-family);
+	font-size: var(--font-size-medium);
+	/* color: var(--header-color); */
+}
+
+/* button:active {
+	color: var(--header-color);
+} */
+
+textarea {
+	padding: 8px;
+}
+
+button {
+	padding: 8px;
+	margin-right: 16px;
+}
+
+input,
+select {
+	width: 68px;
+	padding-left: var(--space-xx-small);
+	height: var(--size-small);
+}
+
+input,
+input:matches([type="password"], [type="search"]) {
+	-webkit-appearance: textfield;
+	color: text;
+	/* background-color: -webkit-control-background; */
+	background-color: var(--input-background-color);
+	box-sizing: border-box;
+	border: 1px solid var(--select-border-color);
+	box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
+	border-radius: var(--border-radius-xsmall);
+	padding-left: var(--space-x-small);
+	-webkit-rtl-ordering: logical;
+	-webkit-user-select: text;
+	cursor: auto;
+	border-image-source: none;
+	border-image-slice: none;
+	color: text;
+}
+
+label {
+	color: var(--buttongroup-color);
+}
+
+.spacer {
+	height: 8px;
+	display: block;
+}
+
+input::placeholder {
+	color: var(--placeholder-color);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+input:disabled {
+	color: var(--input-color-disabled);
+	background-color: var(--input-background-color-disabled);
+}
+
+.cell-data {
+	display: block;
+	position: relative;
+	font-size: var(--font-size-small);
+}
+
+.cell-data::before {
+	content: "";
+	position: absolute;
+	top: 5px;
+	width: 10px;
+	z-index: 1;
+	color: var(--buttongroup-color);
+}
+
+/* .cell-data-px::before {
+right: 10px;
+content: "px";
+} */
+
+/* .cell-data-hex::before {
+left: 5px;
+content: "HEX";
+}
+
+.cell-data-hex>input {
+padding-left: 30px;
+} */
+
+.select-css {
+	-webkit-user-select: auto;
+	user-select: auto;
+	color: var(--input-color);
+	font-size: var(--font-size-medium);
+	width: 86px;
+	max-width: 86px;
+	height: var(--size-small);
+	display: block;
+	line-height: 1.3;
+	/* padding: .6em 1.4em .5em .8em; */
+	padding-left: var(--space-xx-small);
+	box-sizing: border-box;
+	border: 1px solid var(--select-border-color);
+	box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
+	border-radius: var(--border-radius-xsmall);
+	background-color: var(--input-background-color);
+}
+
+.select-css::-ms-expand {
+	display: none;
+}
+
+.select-css:hover {
+	border-color: var(--color-grey-dark);
+}
+
+.select-css:focus {
+	border-color: var(--color-grey);
+	/* box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7); */
+	box-shadow: 0 0 0 3px -moz-mac-focusring;
+	color: var(--input-color);
+	outline: none;
+}
+
+.select-css option {
+	font-weight: normal;
+}
+
+button.primary,button.secondary,
+.buttonTypeGroup label {
+	height: var(--size-small);
+	padding: 0 var(--size-xx-small);
+	box-shadow: var(--buttongroup-box-shadow);
+	border-radius: var(--border-radius-xsmall);
+	min-width: 44px;
+	border: none;
+	text-align: center;
+	cursor: pointer;
+}
+
+button.tertiary {
+	height: var(--size-small);
+	padding: 0 0;
+	/* box-shadow: var(--buttongroup-box-shadow); */
+	border-radius: var(--border-radius-xsmall);
+	min-width: 32px;
+	min-height: 32px;
+	margin: 0;
+	border: none;
+	text-align: center;
+	cursor: pointer;
+	/* border: 1px solid var(--buttongroup-button-background-active); */
+	/* background-color: var(--view-background-color) */
+	background-color: var(--input-background-color);
+}
+
+
+
+
+
+button.tertiary-tab {
+	height: var(--size-medium);
+	padding: 0 0;
+	box-shadow: var(--buttongroup-box-shadow);
+	border-radius: var(--border-radius-xsmall);
+	min-width: 32px;
+	min-height: var(--size-small);
+	margin: 0;
+	border: none;
+	text-align: center;
+	cursor: pointer;
+	/* border: 1px solid var(--buttongroup-button-background-active); */
+	/* background-color: var(--view-background-color) */
+	background-color: var(--input-background-color);
+}
+
+button.primary {
+	color: var(--color-white);
+	background: var(--color-primary);
+	font-weight: var(--font-weight-semibold);
+	line-height: var(--size-small);
+	/* background-image: var(--color-gradient-primary); */
+}
+
+button.primary:active {
+	background-image: none;
+}
+
+button.secondary {
+	color: var(--color-primary);
+	background: var(--color-white);
+	font-weight: var(--font-weight-semibold);
+	line-height: var(--size-small);
+	/* background-image: var(--color-gradient-primary); */
+}
+
+button.secondary:active {
+	background-image: none;
+}
+
+.buttonTypeGroup {
+	list-style-type: none;
+	height: var(--size-small);
+	box-sizing: border-box;
+	margin: var(--space-x-small) 1.5px 0;
+	background: var(--buttongroup-background-color);
+	border-radius: var(--border-radius-xsmall);
+	box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.0625);
+}
+
+.buttonTypeGroup li {
+	border-collapse: separate;
+	float: left;
+	position: relative;
+	margin-top: -0.5px;
+	height: var(--size-small);
+	padding: 0 var(--size-xx-small);
+	box-shadow: var(--buttongroup-box-shadow);
+	border-radius: var(--border-radius-xsmall);
+	min-width: 100px;
+	text-align: center;
+	font-size: var(--font-size-large);
+	color: var(--buttongroup-color);
+	border: var(--buttongroup-border);
+}
+
+.buttonTypeGroup label,
+.buttonTypeGroup input {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: var(--size-small);
+}
+
+/* .buttonTypeGroup  */
+input[type="radio"] {
+	opacity: 0.5;
+	border-radius: 100px;
+	z-index: 100;
+	width: 32px;
+	height: 32px;
+	border: 4px solid var(--buttongroup-button-background-active);
+	/* background-color: var(--view-background-color) */
+	background-color: var(--input-background-color);
+}
+
+/* .buttonTypeGroup input[type="radio"]+label {
+background-color: var(--buttongroup-button-background-default);
+border: var(--buttongroup-input-border);
+} */
+
+/* .buttonTypeGroup */
+input[type="radio"]:checked {
+	background-color: var(--buttongroup-button-background-active);
+	/* border: 10px solid var(--color-grey-light); */
+	/* color: var(--buttongroup-button-color-active); */
+	color: white;
+	opacity: 1;
+	/* color: var(--input-color); */
+
+}
+
+
+input[type="radio"]:hover {
+	background-color: var(--buttongroup-button-background-active);
+	color: var(--buttongroup-button-color-active);
+	cursor: pointer;
+}
+
+
+
+
+.grid-container-tabs {
+	display: grid !important;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+	gap: 0px 0px;
+	grid-template-areas:
+	". .";
+	margin-bottom: 16px;
+	background-color: var(--input-background-color);
+	border-radius: var(--border-radius-xsmall);
+
+	/* color: var(--buttongroup-button-color-active); */
+
+}
+
+.grid-container-tabs input[type="radio"]:hover {
+	background-color: red !important;
+	/* var(--buttongroup-button-background-active); */
+	color: var(--buttongroup-button-color-active);
+}
+
+.grid-container-tabs input[type="radio"] {
+	opacity: 0.5;
+	border-radius: 4px;
+	z-index: 100;
+	width: 100%;
+	height: 40px;
+	border: 1px solid var(--buttongroup-button-background-active);
+	/* background-color: var(--view-background-color) */
+	background-color: var(--input-background-color);
+}
+
+.grid-container-tabs input[type="radio"]:checked {
+	background-color: var(--buttongroup-button-background-active);
+	/* border: 10px solid var(--color-grey-light); */
+	/* color: var(--buttongroup-button-color-active); */
+	color: white;
+	opacity: 1;
+	/* color: var(--input-color); */
+}
+
+
+
+
+
+.grid-container-coordinates {
+	display: grid !important;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+	gap: 4px 4px;
+	grid-template-areas:
+	". .";
+}
+
+.grid-container-directions {
+	display: grid !important;	
+	height: 100px !important;
+	padding: 6px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 4px 12px;
+	/* scale: .5; */
+	/* margin-top: -24px; */
+	margin-bottom: 20px;
+	grid-template-areas:
+	". . ."
+	". . ."
+	". . .";
+}
+
+#directions-area{
+		/* height: var(--size-small); */
+	padding: 0;
+	/* padding-left: 20px; */
+	box-shadow: var(--buttongroup-box-shadow);
+	border-radius: var(--border-radius-xsmall);
+	width: 100%;
+	height: 112px;
+	margin: 0;
+	margin-bottom: 16px;
+	border: none;
+	text-align: center;
+	/* cursor: pointer; */
+	/* zoom: .5; */
+	/* border: 1px solid var(--buttongroup-button-background-active); */
+	/* background-color: var(--view-background-color) */
+	background-color: var(--input-background-color);
+}
+
+.grid-container-sizes {
+	display: grid !important;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+	gap: 2px 2px;
+	grid-template-areas:
+	". . . ."
+}
+
+.cell-data {
+	text-align: left;
+	width: 68px;
+	display: inline-block;
+	position: relative;
+	font-size: var(--font-size-small);
+}
+
+.input-and-small-label {
+	text-align: left;
+	width: 70px;
+	display: inline-block;
+	position: relative;
+	font-size: var(--font-size-small);
+}
+​
+.cell-data::before {
+	content: "";
+	font-size: var(--font-size-small);
+	position: absolute;
+	top: 20px;
+	width: 10px;
+	z-index: 1;
+	color: var(--buttongroup-color);
+}
+​
+/* .cell-data-right::before {
+right: 10px;
+content: "px";
+} */
+
+.cell-data-v::before {
+	right: 10px;
+	content: "V";
+	z-index: 1;
+}
+
+.cell-data-h::before {
+	right: 10px;
+	content: "H";
+	z-index: 1;
+}
+
+/* .label--tabGroups {
+font-size: var(--font-size-medium);
+font-weight: var(--text-font-h1-weight);
+color: var(--label-color);
+} */
+
+input[type="text"] {
+	display: inline-block;
+	width: 6em;
+	position: relative;
+	/* top: -3em; */
+}
+
+label.small {
+	display: inline-block;
+	width: 6em;
+	position: relative;
+	top: -1em;
+	left: .7em;
+	margin-right: .5em;
+	padding-top: 1.5em;
+	color: var(--buttongroup-color);
+	font-size: 9px;
+	text-align: left !important;
+	opacity: .5;
+}
+
+
+ /* Animation  */
+
+ .fade-in {
+  animation: fadeIn 0.3s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+</style>
+</head>
+
+
+<body>
+
+	<div class="view fade-in">
+		<div id="container">
+
+			<div>
+				<!-- <div class="row">
+				<div class="cell cell-label" style='display:none'>
+				<label for="selection" id="myLayerNames">Loading selection...</label>
+			</div>
+		</div> -->
+
+		<!-- <label for="myLayerX">Offset</label>
+		<br><br>
+		<div class="grid-container-tabs">
+		<input type="radio" id="tab-offset" onclick="setUI('offset')" name="tab" value="offset" checked>
+		<input type="radio" id="tab-margin" onclick="setUI('shortcuts')" name="tab" value="margin">
+	</div> -->
+
+	<!-- <div class="grid-container-tabs">
+		<button id="marginsTab" class="tertiary-tab" onclick="setUI('margins')" style="background-color: var(--color-accent);">Margins</button>
+		<button id="shortcutsTab" class="tertiary-tab" onclick="setUI('shortcuts')">Shortcuts</button>
+	</div> -->
+
+	<div id="grid-container-coordinates" class="grid-container-coordinates">
+		<div id="inputH" class="input-and-small-label">
+			<!-- <input id="myLayerX" name="myLayerX" class="cell-data cell-data-h" rows="1" placeholder="0" onchange="saveData()" autofocus autocomplete="off"> -->
+			<input id="myLayerX" name="myLayerX" class="cell-data cell-data-h" rows="1" placeholder="0" autofocus autocomplete="off">
+			<label class="small">Horizzontal</label>
+		</div>
+		<div id="inputV" class="input-and-small-label">
+			<!-- <input id="myLayerY" name="myLayerY" class="cell-data cell-data-v" rows="1" placeholder="0" onchange="saveData()" autocomplete="off"> -->
+			<input id="myLayerY" name="myLayerY" class="cell-data cell-data-v" rows="1" placeholder="0" autocomplete="off">
+			<label class="small">Vertical</label>
+		</div>
+	</div>
+
+	<div id="grid-container-directions" style='display:block'>
+	<label for="direction">Position & Pinning</label>
+	<span class="spacer"></span>
+	<!-- <form> -->
+	<div id="directions-area">	
+
+	<div class="grid-container-directions">
+
+		<button class="tertiary" id="tl" onclick="setSize('tl')" name="direction" value="tl">
+			<img src="ff-icons/icon-pin.svg" class="svg-tint" title="Top & Left">
+		</button>
+		
+		<button class="tertiary" id="tc" onclick="setSize('tc')" name="direction" value="tc">
+			<img src="ff-icons/icon-pin.svg" class="svg-tint" title="Top & Center">
+		</button>
+
+		<button class="tertiary" id="tr" onclick="setSize('tr')" name="direction" value="tr">
+			<img src="ff-icons/icon-pin.svg" class="svg-tint" title="Top & Right">
+		</button>
+
+		<button class="tertiary" id="tl" onclick="setSize('ml')" name="direction" value="ml">
+			<img src="ff-icons/icon-pin.svg" class="svg-tint" title="Middle & Left">
+		</button>
+		
+		<button class="tertiary" id="tc" onclick="setSize('mc')" name="direction" value="mc">
+			<img src="ff-icons/icon-pin.svg" class="svg-tint" title="Middle & Center">
+		</button>
+
+		<button class="tertiary" id="tr" onclick="setSize('mr')" name="direction" value="mr">
+			<img src="ff-icons/icon-pin.svg" class="svg-tint" title="Middle & Right">
+		</button>
+
+		<button class="tertiary" id="tl" onclick="setSize('bl')" name="direction" value="bl">
+			<img src="ff-icons/icon-pin.svg" class="svg-tint" title="Bottom & Left">
+		</button>
+		
+		<button class="tertiary" id="tc" onclick="setSize('bc')" name="direction" value="bc">
+			<img src="ff-icons/icon-pin.svg" class="svg-tint" title="Bottom & Center">
+		</button>
+
+		<button class="tertiary" id="tr" onclick="setSize('br')" name="direction" value="br">
+			<img src="ff-icons/icon-pin.svg" class="svg-tint" title="Bottom & Right">
+		</button>
+
+
+
+
+
+
+	</div>	
+
+	</div>
+
+	<div id="grid-container-sizes" style='display:block'>
+
+
+	<!-- start	-->
+
+	<!-- <br> -->
+	<label for="size">Stacking & Padding</label>
+	<span class="spacer"></span>
+	<div class="grid-container-sizes">
+
+		<button class="tertiary" onclick="setSize('-20-20-')">
+			<img src="ff-icons/icon-spacing-v.svg" class="svg-tint" title="Space vertically">
+		</button>
+
+		<button class="tertiary" onclick="setSize('|||')">
+			<img src="ff-icons/icon-spacing-h.svg" class="svg-tint" title="Space horizzontally">
+		</button>
+
+		<button class="tertiary" onclick="setSize('+---+')">
+			<img src="ff-icons/icon-padding.svg" class="svg-tint" title="Add or modify padded layer">
+		</button>
+
+		<button class="tertiary" onclick="setSize('+++')">
+			<img src="ff-icons/icon-padding-text.svg" class="svg-tint" title="Add or modify padded layer">
+		</button>
+
+
+	</div>
+
+	<!-- end	-->
+
+	<!-- start	-->
+	<br>
+	<label for="size">Duplicate</label>
+	<span class="spacer"></span>
+	<div class="grid-container-sizes">
+
+		<button class="tertiary" onclick="setSize('dw')">
+			<img src="ff-icons/icon-dw.svg" class="svg-tint" title="Duplicate down">
+		</button>
+
+		<button class="tertiary" onclick="setSize('dx')">
+			<img src="ff-icons/icon-dx.svg" class="svg-tint" title="Duplicate right">
+		</button>
+
+		<button class="tertiary" onclick="setSize('sx')">
+			<img src="ff-icons/icon-sx.svg" class="svg-tint" title="Duplicate left">
+		</button>
+
+		<button class="tertiary" onclick="setSize('up')">
+			<img src="ff-icons/icon-up.svg" class="svg-tint" title="Duplicate up">
+		</button>
+
+	</div>
+
+	<!-- end	-->
+
+
+
+	<!-- start	-->
+	<br>
+	<label for="size">Size & Pin</label>
+	<span class="spacer"></span>
+	<div class="grid-container-sizes">
+
+		<button class="tertiary" onclick="setSize('fw')">
+			<img src="ff-icons/icon-fw.svg" class="svg-tint" title="Set selection to full width">
+		</button>
+
+		<button class="tertiary" onclick="setSize('fh')">
+			<img src="ff-icons/icon-fh.svg" class="svg-tint" title="Set selection to full height">
+		</button>
+
+		<button class="tertiary" onclick="setSize('fs')">
+			<img src="ff-icons/icon-fs.svg" class="svg-tint" title="Set selection to full size">
+		</button>
+
+		<button class="tertiary" onclick="setSize('%3e---%3e')">
+			<img src="ff-icons/icon-rtl.svg" class="svg-tint" title="Flip selection position and pins">
+		</button>
+
+	</div>
+	<!-- end	-->
+
+
+
+	</div>
+
+
+
+<script>
+function closeWindow() {
+	updateHash('close');
+}
+
+
+var inputH = document.getElementById('inputH');
+var myLayerX = document.getElementById('myLayerX');
+
+var inputV = document.getElementById('inputV');
+var myLayerY = document.getElementById('myLayerY');
+
+inputH.addEventListener('click', function() {
+    myLayerX.focus();
+});
+
+inputV.addEventListener('click', function() {
+    myLayerY.focus();
+});
+
+
+
+function KeyPress(e) {
+      var evtobj = window.event? event : e
+      
+		if (evtobj.keyCode == 90 && evtobj.metaKey && evtobj.shiftKey) {
+			console.log('Cmd + shift + Z pressed.......');			
+			// setUI('shortcuts')
+			// myLayerY.focus();
+			setSize('redo')
+			evtobj.preventDefault();
+		} else if (evtobj.keyCode == 90 && evtobj.metaKey) {
+			console.log('Cmd + Z pressed.......');			
+			// setUI('shortcuts')
+			// myLayerY.focus();
+			setSize('undo')
+			evtobj.preventDefault();
+		};
+}
+
+document.onkeydown = KeyPress;
+
+</script>
+<script>
+//Managing hashes with multiple values in the onclick is a bit complex
+//so I create a custom function that just calls updateHash
+//if you are sending a simple command you can just send the command as a string
+//the plugin will parse it and assign it to a hash object
+//on the script.js side we verify if the hash object contains the command
+//and if it does we execute the code
+function updateArtboards() {
+	updateHash('update');
+}
+
+function selectedLayersNames() {
+	updateHash('update');
+}
+
+function selectedLayersMeta() {
+	updateHash('update');
+}
+
+
+</script>
+<script>
+function saveData() {
+	//More interestingly, you can send commands AND values in the same hash
+	//the syntax is: command&parameter=value
+	//If you want to send more parameters: command&parameter1=value&parameter2=value…
+	// updateHash('saveData&artboardName='+document.getElementById('artboardName').value+'&artboardWidth='+document.getElementById('myInput').value+'');
+	var directionValue = document.querySelector('input[name="direction"]:checked').value
+	updateHash('saveData&myLayerX='+(document.getElementById('myLayerX').value || 0)+'&myLayerY='+(document.getElementById('myLayerY').value || 0)+'&direction='+directionValue);
+	// updateHash('close');
+	// alert(radios[i].value);
+	alert(value);
+}
+
+function setSize(value) {
+	var directionValue = value
+	updateHash('saveData&myLayerX='+(document.getElementById('myLayerX').value || 0)+'&myLayerY='+(document.getElementById('myLayerY').value || 0)+'&direction='+directionValue);
+}
+
+function setUI(value) {
+
+	var currentTab = value;
+	var margins = document.getElementById("grid-container-directions");
+	var shortcuts = document.getElementById("grid-container-sizes");
+
+	var marginsTab = document.getElementById("marginsTab");
+	var shortcutsTab = document.getElementById("shortcutsTab");
+
+	if (currentTab == "margins"){
+			margins.style.display = "block";
+			shortcuts.style.display = "none";
+			shortcutsTab.style.backgroundColor = "var(--input-background-color)";
+			marginsTab.style.backgroundColor = "var(--color-accent)";
+	}
+	if (currentTab == "shortcuts"){
+			margins.style.display = "none";
+			shortcuts.style.display = "block";
+			shortcutsTab.style.backgroundColor = "var(--color-accent)";
+			marginsTab.style.backgroundColor = "var(--input-background-color)";
+	}
+
+
+}
+	// updateHash('saveData&myLayerX='+(document.getElementById('myLayerX').value || 0)+'&myLayerY='+(document.getElementById('myLayerY').value || 0)+'&direction='+directionValue);
+	// alert(value);
+// }
+
+
+// var radios = document.getElementsByName('direction');
+//
+// //for (var i = 0, length = radios.length; i < length; i++) {
+//
+// var value = document.querySelector('input[name="direction"]:checked').value
+//
+//   // if (radios[i]) {
+//     // do whatever you want with the checked radio
+//
+//     // alert(radios[i].value);
+// 		alert(value);
+
+// only one radio can be logically checked, don't check the rest
+// break;
+// }
+// }
+
+</script>
+
+<!-- <script type="text/javascript">
+createEditableSelect(document.forms[0].myLayerX);
+</script> -->
+
+</div>
+</div>
+</div>
+
+
+<br>
+<br>
+</div>
+</div>
+<!-- <footer>
+<div class="footer-background">
+<button class="primary" id="parametersSubmit">Create button</button>
+</div>
+</footer> -->
+
+</body>
+<script>
+function updateHash(hash) {
+	//We can send a simple command or a command with a parameter and value
+	//You can extend this function to send multiple values. script.js will parse
+	//all the values and expose them in the hash object so you can use them
+	//new Date is there just to make sure the url is alwasy different
+	window.location.hash = hash+'&date=' +new Date().getTime();
+	return false
+}
+
+//We can call Javascript functions from Sketch and set parameters from there
+//This function is never called in this file but the sketch.js can call it and update the UI
+function updateInput(value) {
+	document.getElementById('myInput').value = value;
+}
+
+function updateSelectedLayersNames(value) {
+	document.getElementById('myLayerNames').innerHTML = value;
+}
+
+function updateSelectedLayersData(x,y) {
+	// var defaultX = 0
+	// var defaultY = 0
+	// document.getElementById('myLayerX').value = defaultX;
+	// document.getElementById('myLayerY').value = defaultY;
+}
+
+
+</script>
+</html>

@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Magic Wand</title>
+    <link>https://raw.githubusercontent.com/fbmore/Magic-Wand-Sketch-Plugin/main/appcast.xml</link>
+    <description>Size, Position and Pin layers super fast.</description>
+    <language>en</language>
+    <item>
+      <title>Version 1.2.3</title>
+      <description>
+        <![CDATA[
+        <ul>
+          <li>Initial release</li>
+        </ul>
+        ]]>
+      </description>
+      <enclosure url="https://github.com/fbmore/Magic-Wand-Sketch-Plugin/raw/main/Magic-Wand.sketchplugin.zip" sparkle:version="1.2.3" type="application/octet-stream"/>
+    </item>
+  </channel>
+</rss>

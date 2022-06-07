@@ -1,0 +1,26 @@
+{
+  "name": "🪄 Magic Wand",
+  "description": "Size, Position and Pin layers super fast.",
+  "author": "Francesco Bertocci",
+  "homepage": "https://www.github.com/fbmore/Magic-Wand-Sketch-Plugin/",
+  "version": "1.2.3",
+  "identifier": "com.fbmore.magicwand",
+  "appcast": "https://raw.githubusercontent.com/fbmore/Magic-Wand-Sketch-Plugin/main/appcast.xml",
+  "copyright": "Copyright © 2022 Francesco Bertocci. All rights reserved.",
+  "icon": "icon.png",
+  "compatibleVersion": "80",
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "🪄 Magic Wand",
+      "identifier": "run",
+      "shortcut": "control shift f",
+      "script": "script.js",
+      "handler": "onRun"
+    }
+  ],
+  "menu": {
+    "items": ["run"],
+    "isRoot": true
+  }
+}
