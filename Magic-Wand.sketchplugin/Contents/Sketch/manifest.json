@@ -3,7 +3,7 @@
   "description": "Size, Position and Pin layers super fast.",
   "author": "Francesco Bertocci",
   "homepage": "https://www.github.com/fbmore/Magic-Wand-Sketch-Plugin/",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "identifier": "com.fbmore.magicwand",
   "appcast": "https://raw.githubusercontent.com/fbmore/Magic-Wand-Sketch-Plugin/main/appcast.xml",
   "copyright": "Copyright © 2022 Francesco Bertocci. All rights reserved.",

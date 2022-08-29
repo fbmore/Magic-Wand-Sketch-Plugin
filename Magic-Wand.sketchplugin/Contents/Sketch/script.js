@@ -1,3 +1,6 @@
+// Load necessary framework
+Mocha.sharedRuntime().loadFrameworkWithName('CoreFoundation');
+
 //Let's import the library that allows us to talk with the UI
 @import "MochaJSDelegate.js";
 @import "constraints.js";

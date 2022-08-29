@@ -5,7 +5,7 @@
     <description>Size, Position and Pin layers super fast.</description>
     <language>en</language>
     <item>
-      <title>Version 1.2.3</title>
+      <title>Version 1.2.4</title>
       <description>
         <![CDATA[
         <ul>
@@ -13,7 +13,7 @@
         </ul>
         ]]>
       </description>
-      <enclosure url="https://github.com/fbmore/Magic-Wand-Sketch-Plugin/raw/main/Magic-Wand.sketchplugin.zip" sparkle:version="1.2.3" type="application/octet-stream"/>
+      <enclosure url="https://github.com/fbmore/Magic-Wand-Sketch-Plugin/raw/main/Magic-Wand.sketchplugin.zip" sparkle:version="1.2.4" type="application/octet-stream"/>
     </item>
   </channel>
 </rss>
